@@ -135,11 +135,11 @@ blockquote {
 }
 
 .tm-navbar.scroll .navbar-toggler {
-  border: 1px solid #707070;
+  border: 1px solid #7C8573;
 }
 
 .tm-navbar.scroll .navbar-toggler-icon {
-  color: #707070;
+  color: #7C8573;
 }
 
 /* Hero */
@@ -684,7 +684,7 @@ p {
   }
 
   .navbar-collapse .nav-link {
-    color: #707070;
+    color: white;
 	padding-right: 20px;
   }
 }
@@ -708,9 +708,5 @@ p {
     margin: 0;
   }
 }
- @media only screen and (max-width: 340px) and (min-width: 5px) {}
 
-  .sketchy {
-    font-size: 1.5rem !important;
-  }
-}
+
