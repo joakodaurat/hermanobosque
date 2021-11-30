@@ -711,6 +711,6 @@ p {
  @media only screen and (max-width: 340px) and (min-width: 5px) {}
 
   .sketchy {
-    font-size: 2.0rem !important;
+    font-size: 1.5rem !important;
   }
 }
