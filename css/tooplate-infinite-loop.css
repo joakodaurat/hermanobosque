@@ -274,9 +274,17 @@ blockquote {
   background-size: 100%;
   position: relative;
 }
-#manos {
+#hongos {
   color: white;
-  background-image: url(../img/infinite-loop-02.jpg);
+  background-image: url(../img/hongoverde.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+#hongoblanco {
+  color: white;
+  background-image: url(../img/hongoblanco.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -287,8 +295,11 @@ blockquote {
   #testimonials {
     background-image: url(../img/infinite-loop-02-mobile.jpg);
   }
-    #manos {
-    background-image: url(../img/infinite-loop-02-mobile.jpg);
+    #hongos {
+    background-image: url(../img/hongoverde.jpg);
+  }
+  #hongoblanco {
+    background-image: url(../img/hongoblanco.jpg);
   }
 }
 
@@ -562,6 +573,16 @@ figure.effect-honey:hover h2 i {
   border: 1px solid white;
   background: transparent;
   color: white;
+}
+
+.tm-input-negro {
+  margin: 0 0 20px 0;
+  width: 90%;
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid black;
+  background: transparent;
+  color: black;
 }
 
 .tm-btn-submit {
