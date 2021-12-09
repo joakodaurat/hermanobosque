@@ -291,6 +291,14 @@ blockquote {
   background-size: 100%;
   position: relative;
 }
+#hongonegro {
+  color: white;
+  background-image: url(../img/hongonegro.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
 
 @media (max-width: 991px) {
   #testimonials {
@@ -301,6 +309,9 @@ blockquote {
   }
   #hongoblanco {
     background-image: url(../img/hongoblanco.jpg);
+  }
+  #hongobnegro {
+    background-image: url(../img/hongonegro.jpg);
   }
 }
 
