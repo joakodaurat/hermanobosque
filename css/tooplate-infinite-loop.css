@@ -177,7 +177,7 @@ blockquote {
     }
 }
 
-@media (min-height: 10px) and (max-height: 669px) {
+@media (min-height: 10px) and (max-height: 500px) {
   #infinite {
      background-image: url(../img/principalcelu.jpg) !important;
     }
