@@ -290,7 +290,10 @@ blockquote {
 #hongoblanco {
   color: white;
   background-image: url(../img/hongoblanco.jpg);
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
 }
 #hongonegro {
   color: white;
