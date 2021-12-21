@@ -275,7 +275,8 @@ blockquote {
   color: white;
   background-image: url(../img/infinite-loop-02.jpg);
   background-size: 100%;
-background-repeat: repeat-y;
+background-repeat: no-repeat;
+
 
 
 }
@@ -283,7 +284,7 @@ background-repeat: repeat-y;
   color: white;
   background-image: url(../img/hongoverde.jpg);
   background-size: 100%;
-background-repeat: repeat-y;
+background-repeat: no-repeat;
   }
 }
 #hongoblanco {
@@ -296,7 +297,8 @@ background-repeat: no-repeat;
   color: white;
   background-image: url(../img/hongonegro.jpg);
   background-size: 100%;
-background-repeat: repeat-y;
+background-repeat: no-repeat;
+
 }
 
 @media (max-width: 991px) {
