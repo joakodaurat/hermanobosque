@@ -283,8 +283,9 @@ blockquote {
 #hongos {
   color: white;
   background:  url(../img/hongoverde.jpg);
+  background-size: 100%;
   background-repeat-x: no-repeat;
-background-repeat-y: no-repeat;
+  background-repeat-y: no-repeat;
 
 
   }
