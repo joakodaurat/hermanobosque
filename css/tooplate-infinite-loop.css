@@ -274,31 +274,29 @@ blockquote {
 #testimonials {
   color: white;
   background-image: url(../img/infinite-loop-02.jpg);
+  background-size: 100%;
+background-repeat: repeat-y;
+
 
 }
 #hongos {
   color: white;
   background-image: url(../img/hongoverde.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-size: 100%;
-  position: relative;
+background-repeat: repeat-y;
+  }
 }
 #hongoblanco {
   color: white;
   background-image: url(../img/hongoblanco.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-size: 100%;
-  position: relative;
+background-repeat: no-repeat;
 }
 #hongonegro {
   color: white;
   background-image: url(../img/hongonegro.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-size: 100%;
-  position: relative;
+background-repeat: repeat-y;
 }
 
 @media (max-width: 991px) {
