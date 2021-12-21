@@ -283,9 +283,8 @@ blockquote {
 #hongos {
   color: white;
   background:  url(../img/hongoverde.jpg);
-  -o-background-repeat: no-repeat;
-  -moz-background-repeat: no-repeat;
-  -webkit-background-repeat: no-repeat;
+  background-repeat-x: no-repeat;
+background-repeat-y: no-repeat;
 
 
   }
@@ -296,15 +295,17 @@ blockquote {
   background-image: url(../img/hongoblanco.jpg);
 
   background-size: 100%;
-    -o-background-repeat: no-repeat;
-  -moz-background-repeat: no-repeat;
-  -webkit-background-repeat: no-repeat;
+  background-repeat-x: no-repeat;
+background-repeat-y: no-repeat;
+
 }
 #hongonegro {
   color: white;
 
   background-image: url(../img/hongonegro.jpg);
   background-size: 100%;
+    background-repeat-x: no-repeat;
+background-repeat-y: no-repeat;
 
 }
 
