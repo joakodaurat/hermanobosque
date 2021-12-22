@@ -181,7 +181,7 @@ blockquote {
     }
 }
 
-@media (min-width: 755px) and (max-width: 991px) {
+@media (min-width: 755px) and (max-width: 1200px) {
   .nav-link {
    font-size: medium;
    padding-left: 10px !important;
