@@ -142,6 +142,10 @@ blockquote {
   color: #7C8573;
 }
 
+  .nav-link {
+   font-size: inherit;
+    }
+
 /* Hero */
 
 #infinite {
@@ -175,6 +179,15 @@ blockquote {
   #infinite {
     background-position: center -400px;
     }
+}
+
+@media (min-width: 755px) and (max-width: 991px) {
+  .nav-link {
+   font-size: medium;
+   padding-left: 20px !important;
+   padding-right:0px !important;
+    }
+
 }
 
 @media (max-width: 991px) {
