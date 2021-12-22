@@ -177,7 +177,7 @@ blockquote {
     }
 }
 
-@media (min-height: 10px) and (max-height: 769px) {
+@media (max-width: 991px) {
   #infinite {
      background-image: url(../img/principalcelu.jpg) !important;
     }
@@ -311,20 +311,6 @@ blockquote {
 
 }
 
-@media (max-width: 991px) {
-  #testimonials {
-    background-image: url(../img/infinite-loop-02-mobile.jpg);
-  }
-    #hongos {
-    background-image: url(../img/hongoverde.jpg);
-  }
-  #hongoblanco {
-    background-image: url(../img/hongoblanco.jpg);
-  }
-  #hongobnegro {
-    background-image: url(../img/hongonegro.jpg);
-  }
-}
 
 .tm-testimonials-content {
   position: relative;
