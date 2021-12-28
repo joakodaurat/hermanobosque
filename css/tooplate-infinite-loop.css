@@ -9,6 +9,7 @@ https://www.tooplate.com/view/2117-infinite-loop
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
 
 body {
+  background-color:#7C8573;
 	font-family: "Raleway", sans-serif;
 	font-size: 1.2em;
   color: #707070;
@@ -55,7 +56,7 @@ blockquote {
 }
 
 .tm-text-primary {
-  color: black;
+  color: #D4AD8C;
 }
 
 .tm-font-big {
@@ -196,7 +197,7 @@ blockquote {
     }
   #reproductor {
     right:0px !important;
-    bottom: 0px!important;
+    bottom: -10px!important;
     width: 100%;
   
 
@@ -279,6 +280,7 @@ blockquote {
 
 .tm-intro-text {
   font-size: 1.2rem;
+  color: #E5D5C7
 }
 
 .tm-icon {
@@ -563,6 +565,10 @@ figure.effect-honey:hover h2 i {
 
 #contact {
   color: white;
+  background-image: url(../img/infinite-loop-03.jpg);
+  background-position: center;
+  background-size:cover; 
+  background-repeat: no-repeat;
   background-color: #001828;
   min-height: 980px;
   position: relative;
