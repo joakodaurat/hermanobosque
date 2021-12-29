@@ -203,12 +203,12 @@ blockquote {
 
     }
   .tm-content-box {
-  padding-top: 0px;
-  padding-bottom:0px;
+  padding-top: 10px;
+  padding-bottom:10px;
    }
   .tm-section-pad-top {
-  padding-top: 0px;
-  padding-bottom:0px;
+  padding-top: 10px;
+  padding-bottom:10px;
    }
     
 }
