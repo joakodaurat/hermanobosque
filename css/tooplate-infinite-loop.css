@@ -45,14 +45,15 @@ blockquote {
   line-height: 1.8em;
 }
 
+
 .tm-section-pad-top {
-  padding-top: 80px;
-  padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 40px;
 }
 
 .tm-content-box {
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom:40px;
 }
 
 .tm-text-primary {
@@ -78,7 +79,7 @@ blockquote {
 /* Navbar */
 
 .tm-navbar {
-  position: fixed;
+  position: fixed !important;
   width: 100%;
   z-index: 1000;
   background-color: transparent;
@@ -86,6 +87,7 @@ blockquote {
 }
 
 .tm-navbar.scroll {
+    padding-top: 20px;
   background-color: #294138;
   border-bottom: 1px solid #294138;
 }
@@ -192,6 +194,20 @@ blockquote {
 }
 
 @media (max-width: 991px) {
+    #nuevotrack{
+        width: 100%;
+        margin-top:0px;
+        margin-bottom:20px;
+    }
+  #contact {
+      padding-top:20px !important;
+  }
+  #videos {
+      padding:0px !important;
+  }  
+  .sketchy {
+        font-size:3.0em;
+    }
   #infinite {
      background-image: url(../img/principalcelu.jpg) !important;
     }
@@ -210,7 +226,26 @@ blockquote {
   padding-top: 10px;
   padding-bottom:10px;
    }
-    
+
+.tm-content-box {
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+.tm-section-pad-top {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.tm-section-title {
+
+    font-size: 2.1rem !important;
+
+}
+.tm-intro-text {
+    font-size: 1.1rem !important;
+}
+
+
 }
 
 @media (max-height: 499px) {
@@ -258,8 +293,7 @@ blockquote {
 }
 
 .tm-down-arrow-link {
-  display: block;
-  margin-top: 18%;
+  display: inline-block;
 }
 
 .tm-down-arrow {
@@ -285,6 +319,7 @@ blockquote {
   font-family: "Modern Sans";
   font-size: 2.6rem;
   font-weight: normal;
+  margin-bottom: 0px !important;
 }
 
 .tm-intro-text {
@@ -577,7 +612,7 @@ figure.effect-honey:hover h2 i {
   background-position: center;
   background-size:cover; 
   background-repeat: no-repeat;
-  background-color: #001828;
+  background-color: #7C8573;
   min-height: 980px;
   position: relative;
   padding-bottom: 50px;
@@ -711,8 +746,7 @@ p {
 
 @media (max-width: 991px) {
   .tm-intro-text-container {
-    padding-left: 15px;
-    padding-top: 30px;
+    padding-top: 0px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
