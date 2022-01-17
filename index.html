@@ -23,6 +23,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <style type="text/css">
+  .contenedorbotones {
+    background-color:#294138;
+    border-radius:0.25em;
+    opacity:0;
+  }
+
+  .modal-content {
+    background-color:#294138;
+  }
+
   p { font-family: 'Merriweather', serif; }
   .tm-hero-subtitle {
     margin-left: 10%;
@@ -40,13 +50,11 @@
   
     font-family: "Modern Sans";
     cursor: pointer;
-    font-size: 2.0em;
+    font-size: 4.0em;
     border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
     text-transform: uppercase;
     width:10%;
-    background: #7C8573;
     position: relative;
-    color:#294138;
     display: inline-block;
     
     &::before {
@@ -77,9 +85,7 @@
 
 }
 
- .linkis{
-    color:darkslategray !important;
-  }
+
   .linkis:hover {
     color:black !important;
   }
@@ -98,6 +104,7 @@
     padding-top: -50;
 
   }
+
   // para botones de redes
 #pineres {
   padding: 20px !important;
@@ -277,10 +284,16 @@
                         Hermano Bosque's music is an ever-emerging journey through the here and now, where rhythm and movement guide a living experience in constant wonder and discovery. Their live sets are composed in real time influenced by organic, ambient and world sounds integrated to electronics and live looping techniques, resulting in bold and unique live sets every time they play. Since they started in 2016, all their sets were recorded live and they performed in many cities of Mexico, Argentina, Spain, Serbia, Marruecos and the United States.</p>
                     </div>
                     <div><button id="nuevotrack" type="button" class="btn tm-btn-submit" data-toggle="modal" data-target="#exampleModal">Releases</button></div>
-                   <a class="linkis" href="https://open.spotify.com/artist/5uPpKT8ie3jWVJ5YYsY4w6" target="_blank"> <div class="sketchy"> <span  class="fa fa-spotify"></div></a>
-                   <a class="linkis" href="http://hermanobosque.bandcamp.com/" target="_blank"> <div class="sketchy" style="margin-top:10px"><span  class="fa fa-bandcamp"></div></a>
-                   <a class="linkis" href="https://soundcloud.com/hermanobosque" target="_blank"> <div class="sketchy" style="margin-top:10px"><span  class="fa fa-soundcloud"></span></div></a>
-                   <a class="linkis" href="https://www.mixcloud.com/hermanobosque/" target="_blank"> <div class="sketchy" style="margin-top:10px"><span  class="fa fa-mixcloud"></span></div></a>
+                  <div style="margin-bottom: -100px">
+                   <div class="contenedorbotones" style="height:100px;" >
+                   </div>
+                   <div style="position:relative;bottom:100px">
+                   <a class="linkis" style="color:#1DB954" href="https://open.spotify.com/artist/5uPpKT8ie3jWVJ5YYsY4w6" target="_blank"> <div class="sketchy"> <span  class="fa fa-spotify"></div></a>
+                   <a class="linkis" style="color:#629aa9" href="http://hermanobosque.bandcamp.com/" target="_blank"> <div class="sketchy" style="margin-top:10px"><span  class="fa fa-bandcamp"></div></a>
+                   <a class="linkis" style="color:#FE5000" href="https://soundcloud.com/hermanobosque" target="_blank"> <div class="sketchy" style="margin-top:10px"><span  class="fa fa-soundcloud"></span></div></a>
+                   <a class="linkis" style="color:#52AAD8" href="https://www.mixcloud.com/hermanobosque/" target="_blank"> <div class="sketchy" style="margin-top:10px"><span  class="fa fa-mixcloud"></span></div></a>
+                   </div>
+                </div>
                 </div>
 
             </div>
