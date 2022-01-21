@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->  
+<head>
+    <title>HermanoAdmin</title>
+    <?php require_once('../templates/templates/estilos_comunes.html'); ?> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+</head> 
+<?php require_once('../templates/templates/header.html');?>
+<!--MODALES-->
+<?php require_once('public/modales/nueva_fecha.html');?>  
+
+<body class="landing-page" style="background-color: #eeeeee;">  
+
+    <form method="POST" name="editar_fecha" id="form_editar_fecha" enctype="multipart/form-data">
+    <div id="modal-edit-fecha" class="modal fade" role="dialog">
+    </div>
+  </form>
+
+<div class="page-wrapper" style="background-color: #eeeeee; ">
+
+
+<section class="cards-section text-center" id="transicion" style="background-color: #eeeeee;">
+
+      <div class="row" style="margin-right:20px; margin-left:20px"> 
+        <div class="col-md-12">
+          <a class="btn btn-raised" style="display: block;margin-top: 20px;background-color:darkcyan;color: antiquewhite;"  href="#" data-toggle="modal" data-target="#nuevafecha" >
+             Agregar nueva fecha
+          </a>
+        </div>
+      </div>
+
+<div style="overflow-x:auto; width: 95%; margin: auto;">   
+    <table nowrap class="table table-hover table-bordered results z-depth-2 tabla-excel table-sm" id="tabla_fechas" style="background-color: #fafafa;">
+                  <thead>
+                    <tr>
+                      <th class="col-md-3 col-xs-4"> Lugar </th>
+                      <th class="col-md-1 col-xs-4"> mes y numero de dia </th>
+                      <th class="col-md-1 col-xs-4"> dia y hora </th> 
+                      <th class="col-md-1 col-xs-4"> detalle </th>                    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php while ($do_calendario->fetch()){ ?>
+                     
+                        <tr  style="cursor: pointer;" onclick="getfecha(<?php echo $do_calendario->calendario_id; ?>);" >
+
+                        <td><?php echo $do_calendario->calendario_lugar; ?></td>
+                        <td><?php echo $do_calendario->calendario_fecha_numero; ?></td>
+                        <td><?php echo $do_calendario->calendario_diahora; ?></td>
+                        <td><?php echo $do_calendario->calendario_detalle; ?></td>
+
+                        </tr>
+                              <?php    } ?>
+                  </tbody>
+                  <tfoot style="background-color: #ededed;">
+                    
+                  </tfoot>
+                </table>
+                
+            </div><!--//overflow-->
+        </section><!--//cards-section-->
+
+    </div><!--//page-wrapper-->
+    
+    <footer class="footer text-center">
+        <div class="container">
+            <small class="copyright"><a href="#" target="_blank"> joako </a></small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+    <!-- Main Javascript -->          
+    <?php require_once('../templates/templates/scripts_comunes.html'); ?>
+    <script type="text/javascript" src="public/js/fechas.js"></script>
+    <script type="text/javascript">  
+        
+        $(document).ready(function() {
+            $('#tabla_fechas').DataTable(
+                {
+                  "pageLength": 50,
+                  "aaSorting": [0,'desc'],
+                  "oSearch": {"sSearch": "<?php echo $_GET['busqueda']; ?>"},
+                   "dom": 'Bfrtip',
+                  "buttons": [
+                    'copy', 'excel', 'pdf'
+                    ]
+                });
+
+        $('#tabla_fechas_wrapper').find('input').css('border', '0');
+ 
+        } );
+
+        
+    </script>
+
+</body>
+</html>

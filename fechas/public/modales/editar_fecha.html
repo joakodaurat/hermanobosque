@@ -1,0 +1,72 @@
+
+  <div class="modal-dialog modal-chico" >
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <span class="modal-title">
+        <span style="font-size: 18px;"><i class="fa fa-address-card-o"></i></span> 
+        <span style="font-size: 18px;" id="Nuevo_prod">Editar fecha</span> 
+        </span>
+      </div>
+      <div class="modal-body"> 
+        <form class="form-horizontal form-label-left" name="detalle_vendedor_add" id="detalle_vendedor_add" method="post" action="" enctype="multipart/form-data">
+            <div id="datos_cliente"> 
+              <input type="hidden" name="edit_fecha" id="edit_fecha" value="<?php echo $do_fecha_editar->calendario_id; ?>">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                  <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                      <span class="form-label"><strong>LUGAR</strong>  ( ej: Nomade )</span>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="text" name="input_edit_lugar" id="input_edit_lugar" value="<?php echo $do_fecha_editar->calendario_lugar; ?>" required="required" class="form-cliente">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                      <span class="form-label"><strong>FECHA</strong> (ej: 14 NOV)</span>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="text" name="input_edit_fechanumero" value="<?php echo $do_fecha_editar->calendario_fecha_numero; ?>" id="input_edit_fechanumero" class="form-cliente">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                      <span class="form-label"><strong>DIA Y HORA</strong> (ej: viernes 23hs)</span>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="text" name="input_edit_diahora" id="input_edit_diahora" value="<?php echo $do_fecha_editar->calendario_diahora; ?>" required="required" class="form-cliente">  
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                      <span class="form-label"><strong>DETALLE ADICIONAL </strong> (ej: macondo - free)</span>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="text" name="input_edit_detalle" id="input_edit_detalle" value="<?php echo $do_fecha_editar->calendario_detalle; ?>" class="form-cliente">  
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <hr>
+
+            <div class="form-group text-center">
+                <button id="boton_submit" type="submit"  class="btn btn-raised btn-default" style="background:#009688; color:white" >Guardar</button>
+                <button type="button" class="btn btn-raised  btn-danger" onclick="eliminarfecha(<?php echo $do_fecha_editar->calendario_id; ?>)">Eliminar</button>
+                <div class="col-md-6 col-sm-6 col-xs-12">   
+                </div>
+            </div>
+            
+        </form>
+      </div>
+
+    </div>
+
+  </div>
