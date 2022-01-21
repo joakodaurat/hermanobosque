@@ -7,6 +7,9 @@
 	require_once(INC_PATH.'/comun.php');
 	session_start();
 
+	$do_calendario = DB_DataObject::factory('calendario');
+    $do_calendario->find();
+
 	if($_POST['add_comunidad']) {
 		//print_r($_POST);exit;
 		$do_comunidad = DB_DataObject::factory('comunidad');
