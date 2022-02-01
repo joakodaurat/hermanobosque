@@ -71,27 +71,35 @@
     }
  
 }
- @media only screen and (max-width: 740px) and (min-width: 5px) {
+@media only screen and (max-width: 740px) and (min-width: 5px) {
+ .bordederecho {
+  width: 30%;
+ }
+.infofechas {
+  width:70% !important;
+  padding-top: 0px !important;
+}
 
   .sketchy {
     font-size: 3.0rem !important;
     width: 20%;
-    
+
   }
 
-    #titulohermano {
+  #titulohermano {
     padding-top: 10px!important;
   }
-.navbar {
-  height: 60px;
-}
-.fechascalendario {
-  text-align: center;
-}
-.bordederecho {
-border:none !important;
-}
+  .navbar {
+    height: 60px;
+  }
+  .fechascalendario {
+    text-align: center;
+  }
 
+  .fecha {
+    color:#E5D5C7;
+    margin-bottom: -10px!important;
+  }
 
 }
 
@@ -132,7 +140,7 @@ border:none !important;
 
 }
 .fecha {
-  margin-bottom: 0px!important;
+  margin-bottom: 0px;
   font-size:2.0rem;
 }
 .bordederecho {
@@ -155,6 +163,10 @@ border:none !important;
     z-index: 1001;
     background-color: #294138;
 }  
+#calendar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 </style>
 
@@ -339,7 +351,7 @@ border:none !important;
       <div class="container">
         <div class="row">
           <div class="text-center col-12">
-            <h2 class="tm-text-primary tm-section-title">CALENDAR</h2>
+            <h2 id="titulocalendario" class="tm-text-primary tm-section-title ">CALENDAR</h2>
           </div>            
         </div>
 
