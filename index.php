@@ -8,6 +8,7 @@
 	session_start();
 
 	$do_calendario = DB_DataObject::factory('calendario');
+	$do_calendario->orderBy('calendario_fecha_numero ASC');
     $do_calendario->find();
 
 	if($_POST['add_comunidad']) {
