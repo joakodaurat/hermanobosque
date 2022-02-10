@@ -7,7 +7,7 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <span class="modal-title">
         <span style="font-size: 18px;"><i class="fa fa-address-card-o"></i></span> 
-        <span style="font-size: 18px;" id="Nuevo_prod">Nueva fechas</span> 
+        <span style="font-size: 18px;" id="Nuevo_prod">Nueva fecha</span> 
         </span>
       </div>
       <div class="modal-body"> 
@@ -26,12 +26,32 @@
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-md-12 col-xs-12">
-                      <span class="form-label"><strong>FECHA</strong> (ej: 14 NOV)</span>
-                    </div>
+                  <div class="row" style="margin-top:15px">
+
                     <div class="col-md-12">
-                      <input type="text" name="input_fechanumero" id="input_fechanumero" class="form-cliente">
+                      <span class="form-label"><strong>NúMERO DE DIA</strong> </span>
+                      <input style="width: 63%;margin-left: 10px;" type="number" name="input_fechanumero" id="input_fechanumero" class="form-cliente" required="required">
+                    </div>
+                  </div>
+
+                  <div class="row" style="margin-top:15px">
+                     <div class="col-md-12">
+                       <span class="form-label"><strong>MES</strong></span>
+                  <select name="input_mes" id="input_mes" style="height:35px;width:81%;margin-left:10px"  class="select-tipo-vaca" required="required">
+                          <option value="1">Enero</option>
+                          <option value="2">Febrero</option>
+                          <option value="3">Marzo</option>
+                          <option value="4">Abril</option>
+                          <option value="5">Mayo</option>
+                          <option value="6">Junio</option>
+                          <option value="7">Julio</option>
+                          <option value="8">Agosto</option>
+                          <option value="9">Septiembre</option>
+                          <option value="10">Octubre</option>
+                          <option value="11">Noviembre</option>
+                          <option value="12">Diciembre</option>
+                   </select>
+
                     </div>
                   </div>
 

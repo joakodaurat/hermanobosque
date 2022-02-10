@@ -360,8 +360,9 @@
         <div  class="row fechascalendario">
           
           <?php while ($do_calendario->fetch()){ ?>
+          <?php if ($do_calendario -> calendario_mes >= $mes_actual ){ ?>
           <div style="margin-bottom:15px" class="col-md-1 col-sm-2 bordederecho">
-            <h2 class="tm-text-primary tm-section-title mb-4 fecha"><?php echo $do_calendario->calendario_fecha_numero; ?></h2>
+            <h2 class="tm-text-primary tm-section-title mb-4 fecha"><?php echo $do_calendario->calendario_numero; ?>  <?php echo $do_meses -> getNombremes($do_calendario -> calendario_mes) ?></h2>
           </div>    
           <div class="col-md-3 col-sm-9 infofechas">
             <p>
@@ -371,7 +372,7 @@
               <?php echo $do_calendario->calendario_detalle; ?>
             </p>
           </div>
-          <?php    } ?>
+          <?php    }} ?>
           
           
         </div>

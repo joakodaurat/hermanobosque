@@ -8,8 +8,12 @@
 	session_start();
 
 	$do_calendario = DB_DataObject::factory('calendario');
-	$do_calendario->orderBy('calendario_fecha_numero ASC');
+	$do_calendario->orderBy('calendario_mes , calendario_numero');
     $do_calendario->find();
+    $do_meses = DB_DataObject::factory('meses');
+    $mes_actual = date("m");
+    $dia_actual = date("d");
+
 
 	if($_POST['add_comunidad']) {
 		//print_r($_POST);exit;

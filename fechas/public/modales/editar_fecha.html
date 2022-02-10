@@ -25,12 +25,33 @@
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-md-12 col-xs-12">
-                      <span class="form-label"><strong>FECHA</strong> (ej: 14 NOV)</span>
-                    </div>
+
+                  <div class="row" style="margin-top:15px">
+
                     <div class="col-md-12">
-                      <input type="text" name="input_edit_fechanumero" value="<?php echo $do_fecha_editar->calendario_fecha_numero; ?>" id="input_edit_fechanumero" class="form-cliente">
+                      <span class="form-label"><strong>NúMERO DE DIA</strong> </span>
+                      <input style="width: 63%;margin-left: 10px;" type="number"  value="<?php echo $do_fecha_editar->calendario_numero; ?>" name="input_edit_fechanumero" id="input_edit_fechanumero" class="form-cliente" required="required">
+                    </div>
+                  </div>
+
+                  <div class="row" style="margin-top:15px">
+                     <div class="col-md-12">
+                       <span class="form-label"><strong>MES</strong></span>
+                  <select name="input_edit_mes" id="input_edit_mes" style="height:35px;width:81%;margin-left:10px"  class="select-tipo-vaca" required="required">
+                          <option <?php if($do_fecha_editar -> calendario_mes == 1){ echo "selected"; }?> value="1">Enero</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 2){ echo "selected"; }?> value="2">Febrero</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 3){ echo "selected"; }?> value="3">Marzo</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 4){ echo "selected"; }?> value="4">Abril</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 5){ echo "selected"; }?> value="5">Mayo</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 6){ echo "selected"; }?> value="6">Junio</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 7){ echo "selected"; }?> value="7">Julio</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 8){ echo "selected"; }?> value="8">Agosto</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 9){ echo "selected"; }?> value="9">Septiembre</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 10){ echo "selected"; }?> value="10">Octubre</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 11){ echo "selected"; }?> value="11">Noviembre</option>
+                          <option <?php if($do_fecha_editar -> calendario_mes == 12){ echo "selected"; }?> value="12">Diciembre</option>
+                   </select>
+
                     </div>
                   </div>
 

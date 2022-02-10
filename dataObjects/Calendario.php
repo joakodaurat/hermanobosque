@@ -15,6 +15,8 @@ class DataObjects_Calendario extends DB_DataObject
     public $calendario_fecha_numero;         // varchar(255)  
     public $calendario_diahora;              // varchar(255)  
     public $calendario_detalle;              // varchar(255)  
+    public $calendario_mes;                  // int(11)  group_by
+    public $calendario_numero;               // int(11)  group_by
 
     /* Static get */
     function staticGet($k,$v=NULL) { return DB_DataObject::staticGet('DataObjects_Calendario',$k,$v); }

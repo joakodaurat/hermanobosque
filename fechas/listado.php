@@ -9,9 +9,10 @@
 
 
     $do_calendario = DB_DataObject::factory('calendario');
+    $do_calendario->orderBy('calendario_mes ,calendario_numero ');
     $do_calendario->find();
 
-
+ 	$do_meses = DB_DataObject::factory('meses');
 
  	if($_POST['add_fecha']) {
  		$do_fecha_add = DB_DataObject::factory('calendario');
@@ -19,6 +20,8 @@
 		$do_fecha_add -> calendario_fecha_numero = $_POST['input_fechanumero'];
 		$do_fecha_add -> calendario_diahora = $_POST['input_diahora'];
 		$do_fecha_add -> calendario_detalle = $_POST['input_detalle'];
+		$do_fecha_add -> calendario_numero = $_POST['input_fechanumero'];
+		$do_fecha_add -> calendario_mes = $_POST['input_mes'];
 
 		$id_fecha_add = $do_fecha_add -> insert();
 
@@ -34,6 +37,8 @@
 		$do_fecha_editar -> calendario_fecha_numero = $_POST['input_edit_fechanumero'];
 		$do_fecha_editar -> calendario_diahora = $_POST['input_edit_diahora'];
 		$do_fecha_editar -> calendario_detalle = $_POST['input_edit_detalle'];
+		$do_fecha_editar -> calendario_numero = $_POST['input_edit_fechanumero'];
+		$do_fecha_editar -> calendario_mes = $_POST['input_edit_mes'];
 
 		$id_fecha_editar = $do_fecha_editar -> update();
 

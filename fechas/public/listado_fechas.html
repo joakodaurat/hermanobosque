@@ -6,7 +6,18 @@
     <title>HermanoAdmin</title>
     <?php require_once('../templates/templates/estilos_comunes.html'); ?> 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<style type="text/css">
+  
+@media only screen and (max-width: 740px) and (min-width: 5px) {
+#input_mes {
+  width: 75% !important;
+}
+#input_fechanumero {
+  width: 49% !important;
+}
+}
 
+</style>
 </head> 
 <?php require_once('../templates/templates/header.html');?>
 <!--MODALES-->
@@ -48,7 +59,7 @@
                         <tr  style="cursor: pointer;" onclick="getfecha(<?php echo $do_calendario->calendario_id; ?>);" >
 
                         <td><?php echo $do_calendario->calendario_lugar; ?></td>
-                        <td><?php echo $do_calendario->calendario_fecha_numero; ?></td>
+                        <td><?php echo $do_calendario->calendario_numero; ?>  <?php echo $do_meses -> getNombremes($do_calendario -> calendario_mes) ?></td>
                         <td><?php echo $do_calendario->calendario_diahora; ?></td>
                         <td><?php echo $do_calendario->calendario_detalle; ?></td>
 
@@ -80,7 +91,7 @@
             $('#tabla_fechas').DataTable(
                 {
                   "pageLength": 50,
-                  "aaSorting": [0,'desc'],
+                  "aaSorting": [],
                   "oSearch": {"sSearch": "<?php echo $_GET['busqueda']; ?>"},
                    "dom": 'Bfrtip',
                   "buttons": [
