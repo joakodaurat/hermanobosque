@@ -30,7 +30,7 @@
 
                     <div class="col-md-12">
                       <span class="form-label"><strong>NúMERO DE DIA</strong> </span>
-                      <input style="width: 63%;margin-left: 10px;" type="number"  value="<?php echo $do_fecha_editar->calendario_numero; ?>" name="input_edit_fechanumero" id="input_edit_fechanumero" class="form-cliente" required="required">
+                      <input style="width: 63%;margin-left: 10px;" type="number"  value="<?php echo $do_fecha_editar->calendario_fecha_numero; ?>" name="input_edit_fechanumero" id="input_edit_fechanumero" class="form-cliente" required="required">
                     </div>
                   </div>
 
@@ -54,6 +54,13 @@
 
                     </div>
                   </div>
+                  <div class="row" style="margin-top:15px">
+                    <div class="col-md-12">
+                      <span class="form-label"><strong>Año:</strong> </span>
+                      <input style="width: 63%;margin-left: 10px;" type="number" name="input_edit_anio" id="input_edit_anio" value="<?php echo $do_fecha_editar->calendario_anio; ?>" class="form-cliente" required="required">
+                    </div>
+                  </div>
+
 
                   <div class="row">
                     <div class="col-md-12 col-xs-12">

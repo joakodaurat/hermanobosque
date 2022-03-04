@@ -59,7 +59,7 @@
                         <tr  style="cursor: pointer;" onclick="getfecha(<?php echo $do_calendario->calendario_id; ?>);" >
 
                         <td><?php echo $do_calendario->calendario_lugar; ?></td>
-                        <td><?php echo $do_calendario->calendario_numero; ?>  <?php echo $do_meses -> getNombremes($do_calendario -> calendario_mes) ?></td>
+                        <td><?php echo $do_calendario->calendario_fecha_numero; ?>  <?php echo $do_meses -> getNombremes($do_calendario -> calendario_mes) ?> <?php echo $do_calendario->calendario_anio; ?> </td>
                         <td><?php echo $do_calendario->calendario_diahora; ?></td>
                         <td><?php echo $do_calendario->calendario_detalle; ?></td>
 
