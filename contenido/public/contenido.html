@@ -1,98 +1,194 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+ 
 <!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->  
 <head>
-    <title>Adminhermano</title>
-    <?php require_once('../templates/templates/estilos_comunes.html'); ?> 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <title>Adminhermano</title>
+  <?php require_once('../templates/templates/estilos_comunes.html'); ?> 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
- <style type="text/css">
-
+  <style type="text/css">
     .form-control {
       background-color: white !important;
 
-  } 
+    } 
   </style>
 
 </head> 
+
 <?php require_once('../templates/templates/header.html');?>
-  
 
 <body class="landing-page" style="background-color: #eeeeee;">  
 
+  <div class="page-wrapper" style="background-color: #eeeeee; ">
 
+   <form name="nuevocontenidoform" id="nuevo" method="post" action="" enctype="multipart/form-data"> 
 
-<div class="page-wrapper" style="background-color: #eeeeee; ">
-
-
-<section class="cards-section text-center" id="transicion" style="background-color: #eeeeee;">
- 
-<div class="container">
-  <h2>WE ARE</h2>
-  
-  <form>
-    <div class="form-group">
-     
-      <textarea class="form-control" rows="5" id="comment"></textarea>
-    </div>
-  </form>
-</div>
-
-  </section><!--//cards-section-->
-
-  <section class="cards-section text-center" id="transicion" style="background-color: #eeeeee;">
- 
-<div class="container">
-  <h2>Music</h2>
-  
-  <form>
-    <div class="form-group">
-     
-      <textarea class="form-control" rows="5" id="comment"></textarea>
-    </div>
-  </form>
-  <button type="button" class="btn btn-primary btn-lg btn-block">Guardar</button>
-</div>
-
-  </section><!--//cards-section-->
-
-
-    <section style="margin-bottom:0px;padding-top:20px" id="followus" class="tm-section-pad-top">
-
+    <section class="cards-section text-center" id="transicion" style="background-color: #eeeeee;">
       <div class="container">
-  <form>
-    <div class="form-group">
-     <h2>  links videos </h2>
-      <textarea class="form-control" rows="1" id="comment"></textarea>
-    </div>
-  </form>
-            <!-- video1 -->
-            <div id="videos" class="row tm-content-box" >
-             <div class="col-md-12" style="padding:0px">
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/ZiCrmwNUvHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-             </div><!-- 2 row -->
-             <!-- video2 -->
-              <div class=" col-md-12" style="padding:0px">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/TN3A8BLuBgk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              
-            </div><!-- 2 row -->
-
+        <h2>WE ARE</h2>
+        <input type="hidden" name="nuevo_contenido" id="nuevocontenido" value="1">
+        <div class="form-group">
+          <textarea class="form-control" rows="5" name="weare" id="weare"><?php echo $contenido['weare'] ?></textarea>
         </div>
-      
-    </section>
+      </div>
 
-    </div><!--//page-wrapper-->
-    
-    <footer class="footer text-center">
-        <div class="container">
-            <small class="copyright"><a href="" target="_blank"> JOAKO </a></small>
-        </div><!--//container-->
-    </footer><!--//footer-->
+    </section><!--//cards-section-->
+    <section class="cards-section text-center" id="transicion" style="background-color: #eeeeee;">
+      <div class="container">
+        <h2>MUSIC</h2>
+        <div class="form-group">
+          <textarea class="form-control" rows="5" name="music" id="music"><?php echo $contenido['music'] ?></textarea>
+        </div>
+        <button  type="submit" class="btn btn-primary btn-lg btn-block">Actualizar</button>
+      </div>
+    </section><!--//cards-section-->
+  </form>
 
-    <!-- Main Javascript -->          
-    <?php require_once('../templates/templates/scripts_comunes.html'); ?>
+  <section style="margin-bottom:0px;padding-top:20px" id="followus" class="tm-section-pad-top">
+    <div class="container">
+     <h2> LINKS VIDEOS </h2>
+     <!-- video1 -->
+     <div  class="row tm-content-box" >
+       <div class="col-md-12" style="padding:0px">
+        <iframe width="100%" height="315" src="<?php echo $contenido['youtube1'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div><!-- 2 row -->
 
+      <form name="video1a" id="video1" method="post" action="" enctype="multipart/form-data"> 
+       <input type="hidden" name="vide1actualizar" id="video1actualizar" value="1">
+       <textarea class="form-control" rows="1" name="link1" id="link1"><?php echo $contenido['youtube1'] ?> </textarea>
+       <button  type="submit" class="btn btn-primary btn-lg btn-block">Actualizar</button>
+     </form > 
+     <!-- video2 -->
+     <div class=" col-md-12" style="padding:0px">
+      <iframe width="100%" height="315" src="<?php echo $contenido['youtube2'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <form name="video2a" id="video2" method="post" action="" enctype="multipart/form-data"> 
+     <input type="hidden" name="vide2actualizar" id="video2actualizar" value="1">
+     <textarea class="form-control" rows="1" name="link2" id="link2"><?php echo $contenido['youtube2'] ?></textarea>
+     <button  type="submit" class="btn btn-primary btn-lg btn-block">Actualizar</button>
+   </form >
+ </div><!-- 2 row -->
+</div>
+</section>
+
+<hr>
+
+<section style="margin-bottom:0px;padding-top:20px" id="followus" class="tm-section-pad-top">
+  <div class="container">
+   <h2> NEW RELEASE </h2>
+   <!-- video1 -->
+   <div  class="row tm-content-box" >
+     <div class="col-md-12" style="padding:0px">
+      <iframe width="100%" height="315" src="<?php echo $contenido['newreleaseyoutube'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div><!-- 2 row -->
+
+    <form name="newrelese" id="newrelese" method="post" action="" enctype="multipart/form-data"> 
+     <input type="hidden" name="newreleseactualizar" id="newreleseactualizar" value="1">
+     <textarea class="form-control" rows="1" name="newreleseyoutube" id="link1"><?php echo $contenido['newreleaseyoutube'] ?> </textarea>
+     <h3>Link soundcloud</h3>
+     <textarea class="form-control" rows="2" name="newrelesesoundcloud" id="link1"><?php echo $contenido['newrelesesound'] ?> </textarea>
+     <button  type="submit" class="btn btn-primary btn-lg btn-block">Actualizar</button>
+   </form > 
+ </div><!-- 2 row -->
+</div>
+</section>
+
+<hr>
+
+<section style="margin-bottom:0px;padding-top:20px" id="followus" class="tm-section-pad-top">
+  <div class="container">
+   <h2> SLIDER </h2>
+   <!-- video1 -->
+   <div id="slider" class="row tm-content-box" >
+ <div class="row">
+  
+  <form  name="formimagenslide1" id="formimageslide1" method="post" action="" enctype="multipart/form-data">
+    <input type="hidden" name="edit_imagslide1" id="edit_imagslide1" value="1">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <img id="slide1" src="<?php echo $contenido['slide1'] ?>" alt="slide1" style="width:100%">
+        <div class="caption">
+
+         <label class="btn btn-raised" for="inputeditimagen" style="text-align:center; display: block;margin-top: 20px;background-color: darksalmon;color: antiquewhite;"> cambiar imagen </label>
+         <input type='file' capture="camera" accept="image/*" style="display: none;" onchange="editslide1(this)" name="imagen" id="inputeditimagen" class="inputImagen"  />
+ 
+
+       </div>
+
+     </div>
+   </div>
+ </form>
+
+  <form  name="formimagenslide2" id="formimageslide2" method="post" action="" enctype="multipart/form-data">
+    <input type="hidden" name="edit_imagslide2" id="edit_imagslide2" value="1">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <img id="slide1" src="<?php echo $contenido['slide2'] ?>" alt="slide2" style="width:100%">
+        <div class="caption">
+         <label class="btn btn-raised" for="inputeditimagen2" style="text-align:center; display: block;margin-top: 20px;background-color: darksalmon;color: antiquewhite;"> cambiar imagen </label>
+         <input type='file' capture="camera" accept="image/*" style="display: none;" onchange="editslide2(this)" name="imagen" id="inputeditimagen2" class="inputImagen"  />
+       </div>
+     </div>
+   </div>
+ </form>
+
+  <form  name="formimagenslide3" id="formimageslide3" method="post" action="" enctype="multipart/form-data">
+    <input type="hidden" name="edit_imagslide3" id="edit_imagslide3" value="1">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <img id="slide1" src="<?php echo $contenido['slide3'] ?>" alt="slide3" style="width:100%">
+        <div class="caption">
+         <label class="btn btn-raised" for="inputeditimagen3" style="text-align:center; display: block;margin-top: 20px;background-color: darksalmon;color: antiquewhite;"> cambiar imagen </label>
+         <input type='file' capture="camera" accept="image/*" style="display: none;" onchange="editslide3(this)" name="imagen" id="inputeditimagen3" class="inputImagen"  />
+       </div>
+     </div>
+   </div>
+ </form>
+
+ <form  name="formimagenslide4" id="formimageslide4" method="post" action="" enctype="multipart/form-data">
+    <input type="hidden" name="edit_imagslide4" id="edit_imagslide4" value="1">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <img id="slide1" src="<?php echo $contenido['slide4'] ?>" alt="slide4" style="width:100%">
+        <div class="caption">
+         <label class="btn btn-raised" for="inputeditimagen4" style="text-align:center; display: block;margin-top: 20px;background-color: darksalmon;color: antiquewhite;"> cambiar imagen </label>
+         <input type='file' capture="camera" accept="image/*" style="display: none;" onchange="editslide4(this)" name="imagen" id="inputeditimagen4" class="inputImagen"  />
+       </div>
+     </div>
+   </div>
+ </form>
+
+ <form  name="formimagenslide5" id="formimageslide5" method="post" action="" enctype="multipart/form-data">
+    <input type="hidden" name="edit_imagslide5" id="edit_imagslide3" value="1">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <img id="slide1" src="<?php echo $contenido['slide5'] ?>" alt="slide3" style="width:100%">
+        <div class="caption">
+         <label class="btn btn-raised" for="inputeditimagen5" style="text-align:center; display: block;margin-top: 20px;background-color: darksalmon;color: antiquewhite;"> cambiar imagen </label>
+         <input type='file' capture="camera" accept="image/*" style="display: none;" onchange="editslide5(this)" name="imagen" id="inputeditimagen5" class="inputImagen"  />
+       </div>
+     </div>
+   </div>
+ </form>
+
+</div>
+
+   </div><!-- 2 row -->
+
+ </div>
+</section>
+
+
+</div><!--//page-wrapper-->
+
+<footer class="footer text-center">
+  <div class="container">
+    <small class="copyright">by<a target="_blank"> JOAKO  </a></small>
+  </div><!--//container-->
+</footer><!--//footer-->
+
+<!-- Main Javascript -->          
+<?php require_once('../templates/templates/scripts_comunes.html'); ?>
+<script type="text/javascript" src="public/contenido.js"></script> 
 </body>
 </html>

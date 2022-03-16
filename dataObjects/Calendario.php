@@ -16,7 +16,7 @@ class DataObjects_Calendario extends DB_DataObject
     public $calendario_diahora;              // varchar(255)  
     public $calendario_detalle;              // varchar(255)  
     public $calendario_mes;                  // int(11)  group_by
-    public $calendario_numero;               // varchar(255)  group_by
+    public $calendario_numero;               // varchar(255)  
     public $calendario_anio;                 // int(11)  group_by
 
     /* Static get */
