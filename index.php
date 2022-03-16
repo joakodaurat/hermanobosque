@@ -25,7 +25,7 @@
 		$fechas[$i]['diayhora'] = $do_calendario -> calendario_diahora;
 		$fechas[$i]['detalle'] = $do_calendario -> calendario_detalle;
 		$i = $i+1;
-			} elseif ($do_calendario -> calendario_anio = $anio_actual ) {
+			} elseif ($do_calendario -> calendario_anio == $anio_actual ) {
 					if ( $do_calendario -> calendario_mes > $mes_actual ) {
 					    $fechas[$i]['numero'] = $do_calendario -> calendario_fecha_numero;
 						$fechas[$i]['mes'] = $do_calendario -> calendario_mes;
@@ -34,7 +34,8 @@
 						$fechas[$i]['diayhora'] = $do_calendario -> calendario_diahora;
 						$fechas[$i]['detalle'] = $do_calendario -> calendario_detalle;
 						$i = $i+1;
-					} elseif ($do_calendario -> calendario_mes = $mes_actual AND $do_calendario -> calendario_numero >= $dia_actual ){
+					} elseif ($do_calendario -> calendario_mes == $mes_actual AND $do_calendario -> calendario_numero >= $dia_actual ){
+
 							 $fechas[$i]['numero'] = $do_calendario -> calendario_fecha_numero;
 							 $fechas[$i]['mes'] = $do_calendario -> calendario_mes;
 							 $fechas[$i]['anio'] = $do_calendario -> calendario_anio;
