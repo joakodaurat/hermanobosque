@@ -71,6 +71,15 @@
 		$id_mensajes= $do_mensajes-> insert();
 		header("Location: index.php?id_mensaje=".$id_mensajes); 
 	}
+
+	$do_contenido = DB_DataObject::factory('contenido_pagina');
+	$do_contenido -> find();
+	$contenido = array();
+	while ($do_contenido -> fetch()) { 
+		$contenido[$do_contenido -> contenido_clave] = $do_contenido -> contenido_valor;
+
+	}
+
 	require_once('index.html');
 
 	exit;
